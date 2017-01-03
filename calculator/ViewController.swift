@@ -12,7 +12,9 @@ class ViewController: UIViewController {
  
 //UIのボタン変数
     var inputNumber:Int = 0//ボタン入力時の変数
+    var countMessage = 0//クイズボタン入力時の変数
     var dotFlag:Bool = false
+    var quizFlag:Bool = false
     var countDigit:Int = 0//ケタ数(整数)
     var countDecimalDigit:Int = 0//ケタ数(小数)
     
@@ -29,8 +31,24 @@ class ViewController: UIViewController {
 //テキストフィールドの宣言
     @IBOutlet weak var formulaLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var instructionText: UILabel!
 
 //各ボタンの宣言
+    @IBAction func gameButton(_ sender: Any) {
+        quizFlag = true
+        instructionText.text = birthdayQuiz[countMessage]
+        //quizの終了確認
+        if(birthdayQuiz.count <= countMessage + 1){
+            //view.backgroundColor = UIColor.green//何かしら最終結果であることのエフェクトを入れたい
+            instructionText.text = ""
+            quizFlag = false
+            countMessage = 0
+        }
+        print("bQ:\(birthdayQuiz.count),cM:\(countMessage)")
+        countMessage += 1
+        print("button:\(countMessage)")
+
+    }
     @IBAction func zeroButton(_ sender: Any) {
         createSource(input:0, flag:dotFlag)
     }
@@ -135,6 +153,11 @@ class ViewController: UIViewController {
         resultText = ""
         dotFlag = false
         indicateText(src:"", ope:"", dst:"", rst:"")
+
+        //quiz関連の変数のクリア
+        instructionText.text = ""
+        quizFlag = false
+        countMessage = 0
     }
     //足す数⇨足される数の機能(演算子キー押下時に呼び出される関数)
     func translateSourceToDestination(input:String) {
@@ -166,16 +189,28 @@ class ViewController: UIViewController {
             }
         default:
             print("演算子入ってないよ")
-            //break
         }
         indicateText(src:String(calculateSource), ope:String(inputOperator), dst:String(calculateDestination), rst: String(calculateResult))
         calculateSource = calculateResult
         calculateDestination = 0.0
-        print("結果：\(dst)\(ope)\(src)=\(calculateResult)")
-        print("状況：dst=\(calculateDestination),ope=\(inputOperator),src=\(calculateSource)")
+        
+        //quizを進める
+        if(quizFlag == true){
+            instructionText.text = birthdayQuiz[countMessage]
+            //quizの終了確認
+            if(birthdayQuiz.count <= countMessage + 1){
+                //view.backgroundColor = UIColor.green//何かしら最終結果であることのエフェクトを入れたい
+                instructionText.text = ""
+                quizFlag = false
+                countMessage = 0
+            }
+            countMessage += 1
+        }
+
+        //print("結果：\(dst)\(ope)\(src)=\(calculateResult)")
+        //print("状況：dst=\(calculateDestination),ope=\(inputOperator),src=\(calculateSource)")
     }
     
-    //
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

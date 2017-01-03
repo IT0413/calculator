@@ -366,15 +366,18 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlQ-6T-w64">
-                                <rect key="frame" x="12" y="12" width="46" height="30"/>
+                                <rect key="frame" x="12" y="30" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="HTt-ZU-lnJ"/>
                                     <constraint firstAttribute="width" constant="46" id="xhP-OI-gif"/>
                                 </constraints>
-                                <state key="normal" title="Game">
+                                <state key="normal" title="Quiz">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="gameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zDK-nj-SpZ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="famula" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67c-Ht-45W">
                                 <rect key="frame" x="40" y="297.66666666666669" width="334" height="21"/>
@@ -417,39 +420,43 @@
                             <constraint firstItem="nOk-2C-f9T" firstAttribute="top" secondItem="VF5-z8-9AB" secondAttribute="bottom" constant="2" id="P66-k9-dHi"/>
                             <constraint firstItem="tx5-Rw-cyD" firstAttribute="top" secondItem="Swv-Rx-Mmb" secondAttribute="bottom" id="Plg-J0-cg6"/>
                             <constraint firstItem="CUC-wk-bRU" firstAttribute="top" secondItem="Be5-hk-gOk" secondAttribute="bottom" constant="2" id="Pvi-Dg-fb4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fTy-I9-jTV" secondAttribute="trailing" constant="20" id="Suh-gj-F4X"/>
                             <constraint firstAttribute="trailingMargin" secondItem="67c-Ht-45W" secondAttribute="trailing" constant="20" id="TNM-j4-fHX"/>
                             <constraint firstItem="zw7-FH-qMy" firstAttribute="leading" secondItem="SQb-qS-OpG" secondAttribute="trailing" constant="2" id="Tcb-o1-fIh"/>
                             <constraint firstItem="tx5-Rw-cyD" firstAttribute="top" secondItem="lH1-Tb-kma" secondAttribute="bottom" id="Tlb-m1-dnL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4iE-NQ-X6X" secondAttribute="trailing" id="Wmm-Wh-Udu"/>
                             <constraint firstItem="yhq-1o-e3k" firstAttribute="top" secondItem="SUL-eG-9oh" secondAttribute="bottom" constant="100" id="XOE-aA-N3g"/>
                             <constraint firstItem="67c-Ht-45W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y3Q-VC-Ky3"/>
+                            <constraint firstItem="DlQ-6T-w64" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="acs-Vb-CI7"/>
                             <constraint firstItem="lH1-Tb-kma" firstAttribute="top" secondItem="dMt-VW-Y88" secondAttribute="bottom" constant="2" id="aut-Ec-wOB"/>
-                            <constraint firstItem="DlQ-6T-w64" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="12" id="cSw-9H-1Ch"/>
                             <constraint firstItem="67c-Ht-45W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="d4n-6I-ObH"/>
                             <constraint firstItem="VF5-z8-9AB" firstAttribute="leading" secondItem="zw7-FH-qMy" secondAttribute="trailing" constant="2" id="d82-PU-PX6"/>
                             <constraint firstItem="4iE-NQ-X6X" firstAttribute="top" secondItem="yhq-1o-e3k" secondAttribute="bottom" constant="2" id="esd-dT-1qu"/>
                             <constraint firstItem="kJ4-LA-YNm" firstAttribute="leading" secondItem="VfB-gC-lgt" secondAttribute="trailing" constant="2" id="fDM-eI-hr8"/>
                             <constraint firstItem="SQb-qS-OpG" firstAttribute="top" secondItem="hDD-ap-jIF" secondAttribute="bottom" constant="2" id="fm7-rT-1Ay"/>
+                            <constraint firstItem="fTy-I9-jTV" firstAttribute="top" secondItem="dJG-si-KMQ" secondAttribute="bottom" constant="30" id="fr5-Ja-hjd"/>
                             <constraint firstItem="67c-Ht-45W" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-60" id="gPH-e1-gmJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2o7-gj-oYm" secondAttribute="trailing" constant="184" id="jsd-J8-cFs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fTy-I9-jTV" secondAttribute="trailing" constant="12" id="kD7-GU-JTp"/>
                             <constraint firstItem="1dt-IA-Wqw" firstAttribute="leading" secondItem="dMt-VW-Y88" secondAttribute="trailing" constant="2" id="kaY-fE-Lnu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1dt-IA-Wqw" secondAttribute="trailing" id="lBH-ZO-Gya"/>
+                            <constraint firstItem="fTy-I9-jTV" firstAttribute="top" secondItem="dJG-si-KMQ" secondAttribute="bottom" constant="30" id="odB-gz-zoq"/>
                             <constraint firstItem="DlQ-6T-w64" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="p9q-7A-z9p"/>
                             <constraint firstItem="tx5-Rw-cyD" firstAttribute="top" secondItem="CUC-wk-bRU" secondAttribute="bottom" id="pVO-9c-wNc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lta-oN-9ud" secondAttribute="trailing" constant="276" id="qnq-ZA-QFL"/>
                             <constraint firstItem="CUC-wk-bRU" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="r5l-Uc-tW8"/>
-                            <constraint firstItem="fTy-I9-jTV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="12" id="sFg-Kv-RQ0"/>
                             <constraint firstItem="2o7-gj-oYm" firstAttribute="leading" secondItem="hDD-ap-jIF" secondAttribute="trailing" constant="2" id="smj-pB-i72"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yhq-1o-e3k" secondAttribute="trailing" id="smz-Pc-tp0"/>
                             <constraint firstItem="hDD-ap-jIF" firstAttribute="top" secondItem="lta-oN-9ud" secondAttribute="bottom" constant="2" id="tDk-FU-yLW"/>
                             <constraint firstItem="67c-Ht-45W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="tGq-oC-fPd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Be5-hk-gOk" secondAttribute="trailing" id="uFl-aQ-wGy"/>
+                            <constraint firstItem="DlQ-6T-w64" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="w2r-83-ezY"/>
                             <constraint firstItem="Be5-hk-gOk" firstAttribute="top" secondItem="1dt-IA-Wqw" secondAttribute="bottom" constant="2" id="xla-no-6Ef"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="formulaLabel" destination="67c-Ht-45W" id="54D-go-0FR"/>
+                        <outlet property="instructionText" destination="fTy-I9-jTV" id="3Sh-wP-i2f"/>
                         <outlet property="resultLabel" destination="SUL-eG-9oh" id="rOJ-Mh-3IK"/>
                     </connections>
                 </viewController>
