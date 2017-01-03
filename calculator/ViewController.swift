@@ -44,7 +44,7 @@ class ViewController: UIViewController {
             quizFlag = false
             countMessage = 0
         }
-        print("bQ:\(birthdayQuiz.count),cM:\(countMessage)")
+        //print("bQ:\(birthdayQuiz.count),cM:\(countMessage)")
         countMessage += 1
         print("button:\(countMessage)")
 
