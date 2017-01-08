@@ -16,6 +16,7 @@
 		0D75DA321E0590AB007AA799 /* calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D75DA311E0590AB007AA799 /* calculatorUITests.swift */; };
 		0D75DA451E07B0BE007AA799 /* customUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D75DA441E07B0BD007AA799 /* customUIView.swift */; };
 		0DF965EE1E1BC8420030D2D3 /* quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF965ED1E1BC8420030D2D3 /* quiz.swift */; };
+		0DF965F01E228CFA0030D2D3 /* CalculateClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF965EF1E228CFA0030D2D3 /* CalculateClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		0D75DA331E0590AB007AA799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D75DA441E07B0BD007AA799 /* customUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customUIView.swift; sourceTree = "<group>"; };
 		0DF965ED1E1BC8420030D2D3 /* quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quiz.swift; sourceTree = "<group>"; };
+		0DF965EF1E228CFA0030D2D3 /* CalculateClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				0DF965ED1E1BC8420030D2D3 /* quiz.swift */,
 				0D75DA111E0590AB007AA799 /* AppDelegate.swift */,
 				0D75DA131E0590AB007AA799 /* ViewController.swift */,
+				0DF965EF1E228CFA0030D2D3 /* CalculateClass.swift */,
 				0D75DA441E07B0BD007AA799 /* customUIView.swift */,
 				0D75DA151E0590AB007AA799 /* Main.storyboard */,
 				0D75DA181E0590AB007AA799 /* Assets.xcassets */,
@@ -268,6 +271,7 @@
 				0D75DA451E07B0BE007AA799 /* customUIView.swift in Sources */,
 				0D75DA141E0590AB007AA799 /* ViewController.swift in Sources */,
 				0DF965EE1E1BC8420030D2D3 /* quiz.swift in Sources */,
+				0DF965F01E228CFA0030D2D3 /* CalculateClass.swift in Sources */,
 				0D75DA121E0590AB007AA799 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +427,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.nico.calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -435,6 +440,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.nico.calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
