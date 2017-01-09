@@ -6,40 +6,46 @@
 //  Copyright © 2016年 伊藤孝史. All rights reserved.
 //
 
-import UIKit
+//検討課題①：src,dst,rstのオーバフロー対策
+//検討課題②：演算子が連続して入力された際の挙動(あるべき姿含めてどう対応するのか)
+//検討課題③：クイズのUI
 
-class ViewController: UIViewController {
- 
-    //calculateClassのインスタンス作成
-    var calculator = calculateClass()
-    var quizmaster = quizClass()
-//記号のボタンの定義
+
+import UIKit
+class ViewController: UIViewController{
+
+    //記号のボタンの定義
     let symbol:Dictionary<Int,String> = [
         10:"+", 11:"-", 12:"*", 13:"/", 14:"=", 15:".", 16:"AC", 17:"Quiz"
     ]
 
-//UIのテキスト変数
-    var formulaText:String = ""//数式の表示変数
-    var resultText:String = ""//計算結果の表示変数
-
-//テキストフィールドの宣言
     @IBOutlet weak var formulaLabel: UILabel!
+    @IBOutlet weak var instructionLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
-    @IBOutlet weak var instructionText: UILabel!
 
-
+    //calculateClassのインスタンス作成
+    var creator = viewCreatorClass()
+    var calculator = calculateClass()
+    var quizmaster = quizClass()
+    
     //数字ボタン押下時のアクション
     @IBAction func numberButtonAction(_ sender: UIButton) {
-        calculator.createSource(input:sender.tag, flag:calculator.dotFlag)
+        let temp = calculator.createSource(input:sender.tag, flag:calculator.dotFlag)
+        formulaLabel.text = temp.source
+        resultLabel.text = temp.result
     }
 
     //記号ボタン押下時のアクション
     @IBAction func symbolButtonAction(_ sender: UIButton) {
         switch sender.tag {
         case (10...13): //10:"+", 11:"-", 12:"*", 13:"/"
-            calculator.translateSourceToDestination(input: symbol[sender.tag]!)
+            let temp = calculator.translateSourceToDestination(input: symbol[sender.tag]!)
+            formulaLabel.text = temp.destination
+            resultLabel.text = temp.result
         case 14:        //14:"="
-            calculator.calculate(src:calculator.calculateSource,dst:calculator.calculateDestination,ope:symbol[sender.tag]!)
+            let temp = calculator.calculate(src: calculator.calculateSource,dst: calculator.calculateDestination,ope:calculator.inputOperator)
+            formulaLabel.text = "\(temp.destination) \(temp.operator) \(temp.source)"
+            resultLabel.text = temp.result
         case 15:        // 15:"."
             calculator.dotFlag = true
         case 16:        //16:"AC"
@@ -50,29 +56,14 @@ class ViewController: UIViewController {
         default:
             break
         }
-    }
-    
-
-    //ボタンの入力に合わせて画面上にテキストを表示する機能
-    func indicateText(src:String, ope:String, dst:String, rst:String){
-        formulaLabel.text = dst + ope + src
-        resultLabel.text = rst
-    }
-    func indicateText(src:String, rst:String){
-        formulaLabel.text = src
-        resultLabel.text = rst
-    }
-    func indicateText(dst:String, rst:String){
-        formulaLabel.text = dst
-        resultLabel.text = rst
+        
     }
     
     //オールクリアー機能
     func allClearStates(){
         //ViewControllerの変数のクリア
-        formulaText = ""
-        resultText = ""
-        indicateText(src:"", ope:"", dst:"", rst:"")
+        formulaLabel.text = ""
+        resultLabel.text = ""
         
         //CalculateClassの変数のクリア
         calculator.calculateSource = 0
@@ -80,13 +71,12 @@ class ViewController: UIViewController {
         calculator.countDigit = 0
         calculator.countDecimalDigit = 0
         calculator.dotFlag = false
-
+        
         //quiz関連の変数のクリア
-        instructionText.text = ""
         quizmaster.quizFlag = false
         quizmaster.countMessage = 0
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -96,6 +86,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }
 

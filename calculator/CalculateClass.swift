@@ -9,8 +9,6 @@
 import Foundation
 
 class calculateClass{
-    //var VC = ViewController()
-    var quizmaster = quizClass()
 
     var dotFlag:Bool = false
     var countDigit:Int = 0//ケタ数(整数)
@@ -23,33 +21,34 @@ class calculateClass{
     var calculateResult:Double = 0.0//計算結果
 
     //ボタンから入力された値を文字列変換して表示する機能
-    func createSource(input:Int, flag:Bool){
+    func createSource(input:Int, flag:Bool) -> (source:String, result:String){
         if(flag == false){
             countDigit += 1
             calculateSource = calculateSource * 10.0 + Double(input)
             print(calculateSource)
-            //VC.indicateText(src:String(calculateSource), rst:String(calculateResult))
+            return (String(calculateSource), String(calculateResult))
         }
         else{
             countDecimalDigit += 1
             calculateSource = calculateSource + Double(input) / (pow(10.0, Double(countDecimalDigit)))
             print(calculateSource)
-            //VC.formulaText = String(calculateSource)
-            //VC.indicateText(src:String(calculateSource), rst:String(calculateResult))
+            return (String(calculateSource), String(calculateResult))
         }
     }
+
     //足す数⇨足される数の機能(演算子キー押下時に呼び出される関数)
-    func translateSourceToDestination(input:String) {
+    func translateSourceToDestination(input:String) -> (destination:String, result:String){
         inputOperator = input
         calculateDestination = calculateSource
         calculateSource = 0
         countDigit = 0
         countDecimalDigit = 0
         dotFlag = false
-        //VC.indicateText(dst:String(calculateDestination), rst:String(calculateResult))
+        return (String(calculateDestination), String(calculateResult))
     }
-    //計算機能
-    func calculate(src:Double,dst:Double,ope:String){
+
+    //計算機能(未実装；オーバフロー対策)
+    func calculate(src:Double,dst:Double,ope:String) -> (source:String, operator:String, destination:String, result:String){
         switch ope {
         case "+":
             calculateResult = dst + src
@@ -58,22 +57,17 @@ class calculateClass{
         case "*":
             calculateResult = dst * src
         case "/":
-            if(dst != 0){
+            if(src != 0){
                 calculateResult = dst / src
             }
             else{
                 print("0除算エラー")
-                //VC.allClearStates()
             }
         default:
             print("演算子入ってないよ")
         }
-        //VC.indicateText(src:String(calculateSource), ope:String(inputOperator), dst:String(calculateDestination), rst: String(calculateResult))
         calculateSource = calculateResult
         calculateDestination = 0.0
-        
-        //print("結果：\(dst)\(ope)\(src)=\(calculateResult)")
-        //print("状況：dst=\(calculateDestination),ope=\(inputOperator),src=\(calculateSource)")
+        return (String(src), String(ope), String(dst), String(calculateResult))
     }
-
 }

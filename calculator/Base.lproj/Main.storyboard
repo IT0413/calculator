@@ -478,26 +478,26 @@
                                     <action selector="symbolButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dMb-Zm-7r7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="famula" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67c-Ht-45W">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="formula" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67c-Ht-45W">
                                 <rect key="frame" x="40" y="297.66666666666669" width="334" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="指示メッセージ(仮)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTy-I9-jTV">
-                                <rect key="frame" x="74" y="21" width="300" height="187"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="LZ0-SD-5LO"/>
-                                    <constraint firstAttribute="height" constant="21" id="WZy-9C-ksA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUL-eG-9oh">
                                 <rect key="frame" x="332" y="358" width="334" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="指示メッセージ(仮)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTy-I9-jTV">
+                                <rect key="frame" x="94" y="34" width="300" height="187"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="LZ0-SD-5LO"/>
+                                    <constraint firstAttribute="height" constant="21" id="WZy-9C-ksA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -554,9 +554,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="formulaLabel" destination="67c-Ht-45W" id="54D-go-0FR"/>
-                        <outlet property="instructionText" destination="fTy-I9-jTV" id="3Sh-wP-i2f"/>
-                        <outlet property="resultLabel" destination="SUL-eG-9oh" id="rOJ-Mh-3IK"/>
+                        <outlet property="formulaLabel" destination="67c-Ht-45W" id="6Qj-5d-BXc"/>
+                        <outlet property="instructionLabel" destination="fTy-I9-jTV" id="YeQ-9n-DAP"/>
+                        <outlet property="resultLabel" destination="SUL-eG-9oh" id="AxN-IE-iRc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
