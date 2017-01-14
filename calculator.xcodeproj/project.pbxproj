@@ -15,7 +15,6 @@
 		0D75DA271E0590AB007AA799 /* calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D75DA261E0590AB007AA799 /* calculatorTests.swift */; };
 		0D75DA321E0590AB007AA799 /* calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D75DA311E0590AB007AA799 /* calculatorUITests.swift */; };
 		0D75DA451E07B0BE007AA799 /* customUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D75DA441E07B0BD007AA799 /* customUIView.swift */; };
-		0DC469B41E23CDAF001F618E /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DC469B31E23CDAF001F618E /* MenuView.xib */; };
 		0DF965EE1E1BC8420030D2D3 /* quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF965ED1E1BC8420030D2D3 /* quiz.swift */; };
 		0DF965F01E228CFA0030D2D3 /* CalculateClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF965EF1E228CFA0030D2D3 /* CalculateClass.swift */; };
 		0DF965F21E22AE9A0030D2D3 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF965F11E22AE9A0030D2D3 /* UIView.swift */; };
@@ -53,11 +52,9 @@
 		0D75DA311E0590AB007AA799 /* calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorUITests.swift; sourceTree = "<group>"; };
 		0D75DA331E0590AB007AA799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D75DA441E07B0BD007AA799 /* customUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customUIView.swift; sourceTree = "<group>"; };
-		0DC469B31E23CDAF001F618E /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		0DF965ED1E1BC8420030D2D3 /* quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quiz.swift; sourceTree = "<group>"; };
 		0DF965EF1E228CFA0030D2D3 /* CalculateClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateClass.swift; sourceTree = "<group>"; };
 		0DF965F11E22AE9A0030D2D3 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		0DF965F31E235CE80030D2D3 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +85,6 @@
 		0D75DA051E0590AB007AA799 = {
 			isa = PBXGroup;
 			children = (
-				0DF965F31E235CE80030D2D3 /* Podfile */,
 				0D75DA101E0590AB007AA799 /* calculator */,
 				0D75DA251E0590AB007AA799 /* calculatorTests */,
 				0D75DA301E0590AB007AA799 /* calculatorUITests */,
@@ -116,7 +112,6 @@
 				0DF965F11E22AE9A0030D2D3 /* UIView.swift */,
 				0D75DA441E07B0BD007AA799 /* customUIView.swift */,
 				0D75DA151E0590AB007AA799 /* Main.storyboard */,
-				0DC469B31E23CDAF001F618E /* MenuView.xib */,
 				0D75DA181E0590AB007AA799 /* Assets.xcassets */,
 				0D75DA1A1E0590AB007AA799 /* LaunchScreen.storyboard */,
 				0D75DA1D1E0590AB007AA799 /* Info.plist */,
@@ -250,7 +245,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D75DA1C1E0590AB007AA799 /* LaunchScreen.storyboard in Resources */,
-				0DC469B41E23CDAF001F618E /* MenuView.xib in Resources */,
 				0D75DA191E0590AB007AA799 /* Assets.xcassets in Resources */,
 				0D75DA171E0590AB007AA799 /* Main.storyboard in Resources */,
 			);

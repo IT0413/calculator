@@ -46,35 +46,41 @@ class ViewController: UIViewController{
             let temp = calculator.calculate(src: calculator.calculateSource,dst: calculator.calculateDestination,ope:calculator.inputOperator)
             formulaLabel.text = "\(temp.destination) \(temp.operator) \(temp.source)"
             resultLabel.text = temp.result
+            
+            //(FlagがTrueの場合)クイズを進める
+            if(quizmaster.quizFlag == true){
+                print(quizmaster.countMessage)
+                instructionLabel.text = quizmaster.quiz[quizmaster.quizChoice][quizmaster.countMessage]
+                quizmaster.instructionQuiz(choice: quizmaster.quizChoice)
+            }
         case 15:        // 15:"."
             calculator.dotFlag = true
         case 16:        //16:"AC"
-            allClearStates()
-        case 17:
-            quizmaster.startQuiz()
-            quizmaster.instructionQuiz()
+            allClearIndicate()
+            calculator.allClearCalculate()
+            quizmaster.allClearQuiz()
+        case 17:        //17:Quiz
+            //ランダムにクイズを選択する
+            if(quizmaster.quizFlag == false){
+                quizmaster.quizChoice = Int(arc4random() % 3)
+                quizmaster.countMessage = 0
+            }
+            quizmaster.quizFlag = true
+            print(quizmaster.countMessage)
+            instructionLabel.text = quizmaster.quiz[quizmaster.quizChoice][quizmaster.countMessage]
+            quizmaster.instructionQuiz(choice: quizmaster.quizChoice)
         default:
             break
         }
         
     }
     
-    //オールクリアー機能
-    func allClearStates(){
+    //オールクリアー(表示)機能
+    func allClearIndicate(){
         //ViewControllerの変数のクリア
         formulaLabel.text = ""
         resultLabel.text = ""
-        
-        //CalculateClassの変数のクリア
-        calculator.calculateSource = 0
-        calculator.calculateDestination = 0
-        calculator.countDigit = 0
-        calculator.countDecimalDigit = 0
-        calculator.dotFlag = false
-        
-        //quiz関連の変数のクリア
-        quizmaster.quizFlag = false
-        quizmaster.countMessage = 0
+        instructionLabel.text = ""
     }
 
     override func viewDidLoad() {

@@ -70,4 +70,13 @@ class calculateClass{
         calculateDestination = 0.0
         return (String(src), String(ope), String(dst), String(calculateResult))
     }
+    func allClearCalculate(){
+        //CalculateClassの変数のクリア
+        calculateSource = 0
+        calculateDestination = 0
+        calculateResult = 0
+        countDigit = 0
+        countDecimalDigit = 0
+        dotFlag = false
+    }
 }
