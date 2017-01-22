@@ -19,7 +19,7 @@ extension UIView {
             layer.borderColor = newValue?.cgColor
         }
     }
-    
+        
     // 枠線のWidth
     @IBInspectable var borderWidth: CGFloat {
         get {

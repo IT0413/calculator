@@ -7,18 +7,34 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    private func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        //使用しているStoryBoardを取得
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //左メニュー用のViewControllerを取得
+        let leftViewController = storyboard.instantiateViewController(withIdentifier: "LeftMenuViewController") as! LeftMenuViewController
+        
+        //右メニュー用のViewControllerを取得
+        let rightViewController = storyboard.instantiateViewController(withIdentifier: "RightMenuViewController") as! RightMenuViewController
+        
+        //メイン用のViewControllerを取得
+        let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        
+        //SlideMenuControllerの設定を行う
+        let slideMenuController = SlideMenuController(mainViewController: viewController, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
+        self.window?.rootViewController = slideMenuController
+        self.window?.makeKeyAndVisible()
+        
         // Override point for customization after application launch.
         return true
     }
-
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

@@ -6,17 +6,13 @@
 //  Copyright © 2016年 伊藤孝史. All rights reserved.
 //
 
-//検討課題①：src,dst,rstのオーバフロー対策
-//検討課題②：演算子が連続して入力された際の挙動(あるべき姿含めてどう対応するのか)
-//検討課題③：クイズのUI
-
-
 import UIKit
 class ViewController: UIViewController{
 
+    
     //記号のボタンの定義
     let symbol:Dictionary<Int,String> = [
-        10:"+", 11:"-", 12:"*", 13:"/", 14:"=", 15:".", 16:"AC", 17:"Quiz"
+        10:"+", 11:"-", 12:"×", 13:"÷", 14:"=", 15:".", 16:"AC", 17:"Quiz"
     ]
 
     @IBOutlet weak var formulaLabel: UILabel!
@@ -38,7 +34,7 @@ class ViewController: UIViewController{
     //記号ボタン押下時のアクション
     @IBAction func symbolButtonAction(_ sender: UIButton) {
         switch sender.tag {
-        case (10...13): //10:"+", 11:"-", 12:"*", 13:"/"
+        case (10...13): //10:"+", 11:"-", 12:"×", 13:"÷"
             let temp = calculator.translateSourceToDestination(input: symbol[sender.tag]!)
             formulaLabel.text = temp.destination
             resultLabel.text = temp.result
@@ -63,6 +59,7 @@ class ViewController: UIViewController{
             //ランダムにクイズを選択する
             if(quizmaster.quizFlag == false){
                 quizmaster.quizChoice = Int(arc4random() % 3)
+                
                 quizmaster.countMessage = 0
             }
             quizmaster.quizFlag = true
