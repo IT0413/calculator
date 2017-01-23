@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-calculator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-calculatorTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-calculatorUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SlideMenuControllerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1EBB2DC0E2F83559085FE9CCD7FF8D70</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>448A8321BDBB420918DEE5DA7833F2D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>493CE13B40653A53E01A4A7BDA22B540</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6871C2BE9267C9E094695BFF5FC5F590</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
