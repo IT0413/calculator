@@ -13,7 +13,7 @@ import SlideMenuControllerSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
     private func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         //使用しているStoryBoardを取得
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
